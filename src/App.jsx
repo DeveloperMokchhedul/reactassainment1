@@ -7,10 +7,12 @@ import Locations from './pages/Locations'
 import Activities from './pages/Activities'
 import Documents from './pages/Documents'
 import CypherAi from './pages/CypherAi'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <>
+    <Navbar />
     <Routes>
       <Route path='/' element = {<Dashboard />} />
       <Route path='/incidents' element = {<Incidents />} />
