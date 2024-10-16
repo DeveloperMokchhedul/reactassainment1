@@ -17,7 +17,8 @@ export default {
         "bgPrimary":"#E4E4E7",
         "bgSecondary":"#F4F4F7",
         "btnSecondary":"#FAFAFA",
-        "bgBlack":"#3F3F46"
+        "bgBlack":"#3F3F46",
+        "titleColor":"#09090B"
       },
       boxShadow:{
         "btnShadow":"1px solid #E5E7EB"
