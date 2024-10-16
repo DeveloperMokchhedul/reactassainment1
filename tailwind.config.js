@@ -16,8 +16,13 @@ export default {
         "gray":"#A1A1AA",
         "bgPrimary":"#E4E4E7",
         "bgSecondary":"#F4F4F7",
-        "btnSecondary":"#FAFAFA"
+        "btnSecondary":"#FAFAFA",
+        "bgBlack":"#3F3F46"
       },
+      boxShadow:{
+        "btnShadow":"1px solid #E5E7EB"
+      }
+
 
     },
   },

@@ -1,9 +1,13 @@
 import React from 'react'
+import ImageCardSystem from '../components/common/ImageCardSystem'
+import Container from '../components/common/Container'
 
 function Incidents() {
   return (
     <div>
-      Incidents
+      <Container>
+        <ImageCardSystem />
+      </Container>
     </div>
   )
 }

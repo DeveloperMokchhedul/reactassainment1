@@ -12,7 +12,7 @@ function Navbar() {
   const [ismenu, setIsMenu] = useState(false)
   return (
     <>
-      <header className='w-full bg-bgPrimary'>
+      <header className='z-50 w-full bg-bgPrimary'>
         <Container className="pt-[23px] pb-[18px] ">
           <div className='flex justify-between items-center'>
             <img className='w-[131px] h-[36px]' src="/images/logo.png" alt="" />
