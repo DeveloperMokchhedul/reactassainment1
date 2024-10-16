@@ -1,11 +1,30 @@
+
+
+
 import React from 'react'
+import Title from '../common/Title'
+import Container from '../common/Container'
+import SingleDescriber from './SingleDescriber'
+import { describerData } from '../../api/describerData'
 
 function IncidentDescriber() {
-  return (
-    <div>
-      
-    </div>
-  )
+    return (
+        <section className='py-[50px]'>
+            <Container className="max-w-[753px]  ">
+                <div className=''>
+                    <Title className="text-[24px] text-start leading-[30px]"> Which of these best describes the incident? </Title>
+                    <div className='mt-[25px] grid grid-cols-12 gap-[11px] '>
+                        {
+                            describerData?.map((data)=>(
+                                <SingleDescriber key={data.id} {...data} />
+                            ))
+                        }
+ 
+                    </div>
+                </div>
+            </Container>
+        </section>
+    )
 }
 
 export default IncidentDescriber

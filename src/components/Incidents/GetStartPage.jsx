@@ -20,7 +20,7 @@ function GetStartPage() {
             <ProgressLine />
           </div>
 
-          <div className='flex flex-wrap items-center justify-center gap-[55px]'>
+          <div className='grid grid-cols-12 items-center justify-center gap-[55px]'>
             {
               IncidentCartData.map((data)=>(
                 <IncidentCard {...data} />
