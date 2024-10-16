@@ -12,7 +12,7 @@ function Incidents() {
         <ImageCardSystem />
         <GetStartPage />
         <IncidentDescriber />
-        {/* <InsidentInput /> */}
+        <InsidentInput />
       </Container>
     </div>
   )
