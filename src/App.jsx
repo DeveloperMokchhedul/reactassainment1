@@ -10,6 +10,9 @@ import CypherAi from './pages/CypherAi'
 import Navbar from './components/navbar/Navbar'
 import SecondaryNavbar from './components/navbar/SecondaryNavbar'
 import GetStartPage from './components/Incidents/GetStartPage'
+import IncidentDescriber from './components/Incidents/IncidentDescriber'
+import InsidentInput from './components/Incidents/insidentInput/InsidentInput'
+import InsidentPlace from './components/Incidents/place/InsidentPlace'
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
         <Route element={<SecondaryNavbar />}>
           <Route path='/incidents' element={<Incidents />} />
           <Route path='/incidents/create' element={<GetStartPage />} />
+          <Route path='/incidents/create/describer' element={<IncidentDescriber />} />
+          <Route path='/incidents/create/describer/details' element={<InsidentInput />} />
+          <Route path='/incidents/create/describer/details/location' element={ <InsidentPlace />} />
         </Route>
         <Route element = {<SecondaryNavbar />}>
           <Route path='/locations' element={<Locations />} />

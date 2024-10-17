@@ -22,7 +22,7 @@ function SecondaryNavbar() {
                         <div className='flex flex-col gap-[06px]'>
                             <p className='font-onest text-[12px] leading-[15px] text-secondary'>Welcome back</p>
                             <h1 className='font-onest font-bold text-[26px] leading-[33px] text-bgBlack'>
-                                {/* Dynamic title based on the path */}
+
                                 {location.pathname === "/" && "Dashboard" ||
                                 location.pathname === "/incidents" && "Incidents" ||
                                 location.pathname === "/locations" && "DR-4699 March 2023 Severe Storms"}
@@ -32,11 +32,27 @@ function SecondaryNavbar() {
                             <ButtonIcon className={"bg-white text-black"}>Search incident</ButtonIcon>
                             <Button className={"bg-white text-black"}>Sort By: Date modified</Button>
                             {
-                                 location.pathname === "/incidents" 
-                                 ? <ButtonIcon onClick={() => navigate("/incidents/create")}>New Incident</ButtonIcon> 
-                                 : location.pathname === "/dashboard" 
-                                 ? <Button>Cypher AI</Button> 
-                                 : null
+                                location.pathname === "/" 
+                                && <ButtonIcon>Cypher AI</ButtonIcon> 
+                                 ||
+                                location.pathname === "/incidents" 
+                                 && <ButtonIcon onClick={() => navigate("/incidents/create")}>New Incident</ButtonIcon> 
+                                 ||
+                                 location.pathname === "/incidents/create/describer" 
+                                 && <ButtonIcon onClick={() => navigate("/incidents/create/describer/details")}>Next</ButtonIcon> 
+                                 ||
+                                 location.pathname === "/incidents/create/describer/details" 
+                                 && <ButtonIcon onClick={() => navigate("/incidents/create/describer/details/location")}>Next</ButtonIcon> 
+                                 ||
+                                 location.pathname === "/incidents/create/describer/details/location" 
+                                 && <ButtonIcon onClick={() => navigate("/locations")}>Finished</ButtonIcon> 
+                            ||
+                            location.pathname === "/locations" 
+                            && <ButtonIcon>new location</ButtonIcon> 
+                                 
+                                 
+                                 
+                                 
                             }
                             
                         </div>

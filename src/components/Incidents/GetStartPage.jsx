@@ -5,8 +5,10 @@ import Button from "../common/Button"
 import ProgressLine from './ProgressLine'
 import { IncidentCartData } from '../../api/IncidentCardData'
 import Title from '../common/Title'
+import { useNavigate } from 'react-router-dom'
 
 function GetStartPage() {
+  const navigate = useNavigate()
   return (
     <section className='my-[120px]'>
       <Container className="max-w-[815px] ">
@@ -31,7 +33,7 @@ function GetStartPage() {
         </div>
 
         <div className='flex items-center justify-center mt-[85px]'>
-          <Button className=" px-[25px] py-[8px]">Get started</Button>
+          <Button onClick= {()=>navigate("/incidents/create/describer")} className=" px-[25px] py-[8px]">Get started</Button>
         </div>
 
       </Container>
