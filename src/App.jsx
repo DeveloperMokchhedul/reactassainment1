@@ -7,21 +7,31 @@ import Locations from './pages/Locations'
 import Activities from './pages/Activities'
 import Documents from './pages/Documents'
 import CypherAi from './pages/CypherAi'
-import Navbar from './components/Navbar'
+import Navbar from './components/navbar/Navbar'
+import SecondaryNavbar from './components/navbar/SecondaryNavbar'
+import GetStartPage from './components/Incidents/GetStartPage'
 
 function App() {
   return (
     <>
-    <Navbar />
-    <Routes>
-      <Route path='/' element = {<Dashboard />} />
-      <Route path='/incidents' element = {<Incidents />} />
-      <Route path='/locations' element = {<Locations />} />
-      <Route path='/activities' element = {<Activities />} />
-      <Route path='/documents' element = {<Documents />} />
-      <Route path='/cypherai' element = {<CypherAi />} />
-      <Route path='*' element = {<NotFound />} />
-    </Routes>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<SecondaryNavbar />}>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+        </Route>
+        <Route element={<SecondaryNavbar />}>
+          <Route path='/incidents' element={<Incidents />} />
+          <Route path='/incidents/create' element={<GetStartPage />} />
+        </Route>
+        <Route element = {<SecondaryNavbar />}>
+          <Route path='/locations' element={<Locations />} />
+        </Route>
+        <Route path='/activities' element={<Activities />} />
+        <Route path='/documents' element={<Documents />} />
+        <Route path='/cypherai' element={<CypherAi />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
 
     </>
   )

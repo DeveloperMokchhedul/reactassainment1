@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Button from './common/Button'
+import Button from '../common/Button'
 import { CiSearch } from 'react-icons/ci'
-import ButtonIcon from './common/ButtonIcon'
-import Container from './common/Container'
+import ButtonIcon from '../common/ButtonIcon'
+import Container from '../common/Container'
 import { NavLink } from 'react-router-dom'
-import { NavbarData } from '../api/navbar'
-import NavbarProfileSection from './navbar/NavbarProfileSection'
+import { NavbarData } from '../../api/navbar'
+import NavbarProfileSection from './NavbarProfileSection'
 import { GiCrossMark, GiHamburgerMenu } from 'react-icons/gi'
 
 function Navbar() {
