@@ -16,45 +16,78 @@ function SecondaryNavbar() {
 
     return (
         <>
-            <nav className='bg-bgPrimary pt-[32px] pb-[23px] border-t'>
+            <nav className='bg-bgPrimary md:pt-[32px] md:pb-[23px] border-t p-5 md:p-0'>
                 <Container>
-                    <div className='flex justify-between items-center'>
-                        <div className='flex flex-col gap-[06px]'>
+                    <div className='md:flex flex-col md:flex-row justify-center md:justify-between items-center md:items-center'>
+                        <div className='flex flex-col gap-[06px] text-center'>
                             <p className='font-onest text-[12px] leading-[15px] text-secondary'>Welcome back</p>
                             <h1 className='font-onest font-bold text-[26px] leading-[33px] text-bgBlack'>
 
                                 {location.pathname === "/" && "Dashboard" ||
-                                location.pathname === "/incidents" && "Incidents" ||
-                                location.pathname === "/locations" && "DR-4699 March 2023 Severe Storms"}
+                                    location.pathname === "/incidents" && "Incidents" ||
+                                    location.pathname === "/incidents/create/describer" && "New Incident" ||
+                                    location.pathname === "/locations" && "DR-4699 March 2023 Severe Storms"}
                             </h1>
                         </div>
-                        <div className='flex gap-5'>
-                            <ButtonIcon className={"bg-white text-black"}>Search incident</ButtonIcon>
-                            <Button className={"bg-white text-black"}>Sort By: Date modified</Button>
+
+                        {/* button show and hidden acording to path */}
+
+                        <div className='flex gap-5 justify-center'>
                             {
-                                location.pathname === "/" 
-                                && <ButtonIcon>Cypher AI</ButtonIcon> 
-                                 ||
-                                location.pathname === "/incidents" 
-                                 && <ButtonIcon onClick={() => navigate("/incidents/create")}>New Incident</ButtonIcon> 
-                                 ||
-                                 location.pathname === "/incidents/create/describer" 
-                                 && <ButtonIcon onClick={() => navigate("/incidents/create/describer/details")}>Next</ButtonIcon> 
-                                 ||
-                                 location.pathname === "/incidents/create/describer/details" 
-                                 && <ButtonIcon onClick={() => navigate("/incidents/create/describer/details/location")}>Next</ButtonIcon> 
-                                 ||
-                                 location.pathname === "/incidents/create/describer/details/location" 
-                                 && <ButtonIcon onClick={() => navigate("/locations")}>Finished</ButtonIcon> 
-                            ||
-                            location.pathname === "/locations" 
-                            && <ButtonIcon>new location</ButtonIcon> 
-                                 
-                                 
-                                 
-                                 
+                                location.pathname === "/incidents/create/describer" ||
+                                    location.pathname === "/incidents/create/describer/details" ||
+                                    location.pathname === "/incidents/create/describer/details/location"
+                                    ? "" :
+                                    <>
+                                        <ButtonIcon className={"bg-white text-black"}>Search incident</ButtonIcon>
+                                        <Button className={"bg-white text-black"}>Sort By: Date modified</Button>
+                                    </>
+
                             }
-                            
+
+
+                            {/* use for back button logic start */}
+                            {
+                                location.pathname === "/incidents/create/describer"
+                                    ? <Button onClick={() => navigate("/incidents/create")}>Back</Button> : ""
+                            }
+                            {
+                                location.pathname === "/incidents/create/describer/details"
+                                    ? <Button onClick={() => navigate("/incidents/create/describer")}>Back</Button> : ""
+                            }
+
+                            {
+                                location.pathname === "/incidents/create/describer/details/location"
+                                    ? <Button onClick={() => navigate("/incidents/create/describer/details")}>Back</Button> : ""
+                            }
+                            {/* use for back button logic end */}
+
+
+
+                            {
+                                location.pathname === "/"
+                                && <ButtonIcon>Cypher AI</ButtonIcon>
+                                ||
+                                location.pathname === "/incidents"
+                                && <ButtonIcon onClick={() => navigate("/incidents/create")}>New Incident</ButtonIcon>
+                                ||
+                                location.pathname === "/incidents/create/describer"
+                                && <Button onClick={() => navigate("/incidents/create/describer/details")}>Next</Button>
+                                ||
+                                location.pathname === "/incidents/create/describer/details"
+                                && <Button onClick={() => navigate("/incidents/create/describer/details/location")}>Next</Button>
+                                ||
+                                location.pathname === "/incidents/create/describer/details/location"
+                                && <Button onClick={() => navigate("/locations")}>Finished</Button>
+                                ||
+                                location.pathname === "/locations"
+                                && <ButtonIcon>new location</ButtonIcon>
+
+
+
+
+                            }
+
                         </div>
                     </div>
                 </Container>

@@ -8,8 +8,8 @@ function ImageCardSystem() {
       <section className='mt-[40px]'>
         <div className='grid grid-cols-12 gap-x-[25px] gap-y-[35px] '>
           {
-            imageCard?.map((item) => (
-              <ImageCard {...item} />
+            imageCard?.map((item, index) => (
+              <ImageCard key={index} {...item} />
             ))
           }
         </div>

@@ -10,8 +10,6 @@ function Incidents() {
     <div>
       <Container>
         <ImageCardSystem />
-        
-       
       </Container>
     </div>
   )
