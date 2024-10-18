@@ -1,11 +1,15 @@
 import React from 'react'
 
-function Activities() {
+function Activitie() {
+
+
   return (
-    <div>
-      Activities
-    </div>
+    <>
+    activitiesData
+
+
+    </>
   )
 }
 
-export default Activities
+export default Activitie

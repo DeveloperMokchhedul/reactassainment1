@@ -18,8 +18,8 @@ function SecondaryNavbar() {
         <>
             <nav className='bg-bgPrimary md:pt-[32px] md:pb-[23px] border-t p-5 md:p-0'>
                 <Container>
-                    <div className='md:flex flex-col md:flex-row justify-center md:justify-between items-center md:items-center'>
-                        <div className='flex flex-col gap-[06px] text-center'>
+                    <div className='md:flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start'>
+                        <div className='flex flex-col gap-[06px] text-center md:text-start'>
                             <p className='font-onest text-[12px] leading-[15px] text-secondary'>Welcome back</p>
                             <h1 className='font-onest font-bold text-[26px] leading-[33px] text-bgBlack'>
 
@@ -49,16 +49,16 @@ function SecondaryNavbar() {
                             {/* use for back button logic start */}
                             {
                                 location.pathname === "/incidents/create/describer"
-                                    ? <Button onClick={() => navigate("/incidents/create")}>Back</Button> : ""
+                                    ? <Button className={"bg-white text-black"} onClick={() => navigate("/incidents/create")}>Back</Button> : ""
                             }
                             {
                                 location.pathname === "/incidents/create/describer/details"
-                                    ? <Button onClick={() => navigate("/incidents/create/describer")}>Back</Button> : ""
+                                    ? <Button className={"bg-white text-black"} onClick={() => navigate("/incidents/create/describer")}>Back</Button> : ""
                             }
 
                             {
                                 location.pathname === "/incidents/create/describer/details/location"
-                                    ? <Button onClick={() => navigate("/incidents/create/describer/details")}>Back</Button> : ""
+                                    ? <Button className={"bg-white text-black"} onClick={() => navigate("/incidents/create/describer/details")}>Back</Button> : ""
                             }
                             {/* use for back button logic end */}
 
