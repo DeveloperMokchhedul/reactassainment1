@@ -12,9 +12,7 @@ function ChatboxBottom() {
         <ImAttachment />
 
         </div>
-        <div>
-            <Button className="rounded-[15px] py-[11px] px-[25px]">Send</Button>
-        </div>
+    
       
     </div>
   )

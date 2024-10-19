@@ -3,6 +3,8 @@ import Container from '../common/Container'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import Button from '../common/Button'
 import ButtonIcon from '../common/ButtonIcon'
+import { FaPlus } from 'react-icons/fa'
+import { IoIosSearch } from 'react-icons/io'
 
 function SecondaryNavbar() {
     const location = useLocation()
@@ -16,7 +18,7 @@ function SecondaryNavbar() {
 
     return (
         <>
-            <nav className='bg-bgPrimary md:pt-[32px] md:pb-[23px] border-t p-5 md:p-0'>
+            <nav className='bg-bgPrimary md:pt-[32px] md:pb-[23px] border-t border-secondary/25 p-5 md:p-0'>
                 <Container>
                     <div className='md:flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start'>
                         <div className='flex flex-col gap-[06px] text-center md:text-start'>
@@ -26,6 +28,8 @@ function SecondaryNavbar() {
                                 {location.pathname === "/" && "Dashboard" ||
                                     location.pathname === "/incidents" && "Incidents" ||
                                     location.pathname === "/incidents/create/describer" && "New Incident" ||
+                                    location.pathname === "/incidents/create/describer/details" && "New Incident" ||
+                                    location.pathname === "/incidents/create/describer/details/location" && "New Incident" ||
                                     location.pathname === "/locations" && "DR-4699 March 2023 Severe Storms"}
                             </h1>
                         </div>
@@ -39,8 +43,8 @@ function SecondaryNavbar() {
                                     location.pathname === "/incidents/create/describer/details/location"
                                     ? "" :
                                     <>
-                                        <ButtonIcon className={"bg-white text-black"}>Search incident</ButtonIcon>
-                                        <Button className={"bg-white text-black"}>Sort By: Date modified</Button>
+                                        <ButtonIcon></ButtonIcon>
+                                        <Button className={"bg-white text-secondary"}>Sort By: Date modified</Button>
                                     </>
 
                             }
@@ -66,10 +70,10 @@ function SecondaryNavbar() {
 
                             {
                                 location.pathname === "/"
-                                && <ButtonIcon>Cypher AI</ButtonIcon>
+                                && <Button className={"w-[108px]"}>Cypher AI</Button>
                                 ||
                                 location.pathname === "/incidents"
-                                && <ButtonIcon onClick={() => navigate("/incidents/create")}>New Incident</ButtonIcon>
+                                && <Button className={""} onClick={() => navigate("/incidents/create")}> <FaPlus /> New Incident</Button>
                                 ||
                                 location.pathname === "/incidents/create/describer"
                                 && <Button onClick={() => navigate("/incidents/create/describer/details")}>Next</Button>
@@ -81,7 +85,7 @@ function SecondaryNavbar() {
                                 && <Button onClick={() => navigate("/locations")}>Finished</Button>
                                 ||
                                 location.pathname === "/locations"
-                                && <ButtonIcon>new location</ButtonIcon>
+                                && <Button><FaPlus /> New location</Button>
 
 
 

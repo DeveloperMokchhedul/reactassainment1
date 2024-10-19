@@ -1,10 +1,15 @@
 import React from 'react'
 import cn from '../../utils/cn'
+import { IoIosSearch } from 'react-icons/io'
 
 function ButtonIcon({children,className, onClick}) {
   return (
     <>
-    <button onClick={onClick} className={cn(`md:py-[17px] px-[12px] md:px-[25px] gap-[5px] rounded-[6px] font-bold text-[8px] md:text-[12px] md:pr-[69px] text-white bg-[#F26922]`,className)} >{children}</button>
+    <div className={cn(`w-[190px] h-[42px] bg-white text-secondary flex gap-[5px] items-center ps-[10px]   rounded-[6px]`,className)}>
+    <IoIosSearch className='w-[18px] h-[18px]' />
+      <input className='w-full outline-none' placeholder='Search Incident' type="text" />
+
+    </div>
       
     </>
   )

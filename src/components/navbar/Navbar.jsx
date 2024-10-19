@@ -15,7 +15,7 @@ function Navbar() {
       <header className='z-50 w-full bg-bgPrimary'>
         <Container className="pt-[23px] pb-[18px]">
           <div className='flex justify-between items-center'>
-            <img className='w-[131px] h-[36px]' src="/images/logo.png" alt="Logo" />
+            <img className='transition-all duration-300 hover:scale-125 w-[131px] h-[36px]' src="/images/logo.png" alt="Logo" />
 
             {/* mobile menu */}
             {ismenu ? (
@@ -25,9 +25,8 @@ function Navbar() {
             )}
 
             <div
-              className={`md:hidden absolute top-0 left-0 right-0 h-screen transition-all duration-500 transform ${
-                ismenu ? 'translate-x-0 bg-black/25' : '-translate-x-full'
-              } z-40 flex flex-col items-center gap-5`}
+              className={`md:hidden absolute top-0 left-0 right-0 h-screen transition-all duration-500 transform ${ismenu ? 'translate-x-0 bg-black/25' : '-translate-x-full'
+                } z-40 flex flex-col items-center gap-5`}
             >
               {ismenu && (
                 <div className='flex flex-col items-center gap-8'>
@@ -36,16 +35,14 @@ function Navbar() {
                       <li key={item.id} onClick={() => setIsMenu(false)}>
                         <NavLink
                           to={item.path}
-                          className="font-onest text-white text-[14px] leading-[17px]"
+                          className="font-onest  text-white text-[14px] leading-[17px] transition-all duration-300 hover:scale-110 "
                         >
                           {item.label}
                         </NavLink>
                       </li>
                     ))}
                   </ul>
-                  <div onClick={() => setIsMenu(false)} className='md:hidden'>
-                    <NavbarProfileSection />
-                  </div>
+                  <NavbarProfileSection />
                 </div>
               )}
             </div>
@@ -54,10 +51,13 @@ function Navbar() {
             <div className='hidden md:flex'>
               <ul className='flex md:gap-[15px] lg:gap-[35px] md:text-[12px] lg:text-[14px] leading-[18px] text-gray'>
                 {NavbarData?.map((item) => (
-                  <li key={item.id}>
+                  <li key={item.id} className='transition-all duration-300 hover:scale-105 hover:text-titleColor'>
                     <NavLink
                       to={item.path}
-                      className="font-onest text-secondary md:text-[12px] lg:text-[14px] leading-[17px]"
+                      className={({ isActive }) =>
+                        `font-onest text-secondary md:text-[12px] lg:text-[14px] leading-[17px]  ${isActive ? 'text-titleColor border-b-4 border-titleColor pb-[27.5px]' : 'text-black'
+                        }`
+                      }
                     >
                       {item.label}
                     </NavLink>
@@ -77,3 +77,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

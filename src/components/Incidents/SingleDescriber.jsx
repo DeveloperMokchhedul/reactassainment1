@@ -5,7 +5,7 @@ function SingleDescriber({ text,image, onClick }) {
   return (
     <div 
       onClick={onClick} 
-      className='group max-w-[180px] h-[69px] col-span-6 sm:col-span-3 md:col-span- border-1 rounded-[6px] bg-bgSecondary hover:bg-primary hover:text-white flex items-center'>
+      className='group max-w-[180px] h-[69px] col-span-6 sm:col-span-3 md:col-span- border-1 rounded-[6px] bg-bgSecondary transition-all duration-500 hover:bg-primary hover:text-white flex items-center'>
       <div className='flex gap-[10px] px-[20px] py-[22px]'>
         <img 
           className='w-[25px] h-[25px] group-hover:brightness-0 group-hover:invert' 

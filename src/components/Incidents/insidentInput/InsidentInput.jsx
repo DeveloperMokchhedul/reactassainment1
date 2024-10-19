@@ -38,9 +38,8 @@ function InsidentInput() {
         <div className='space-y-[12px]'>
             <Input onChange={handleChange} />
             <TextArea onChange= {handleChange} />
-
           </div>
-          <Button onClick={handleClick}>submit</Button>
+
       </Container>
     </section>
   )

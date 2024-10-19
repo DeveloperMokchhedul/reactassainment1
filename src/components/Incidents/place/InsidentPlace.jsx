@@ -19,7 +19,7 @@ function InsidentPlace() {
                             <div className='flex items-center gap-[5px]  w-[224px] bg-white px-[10px] py-[12px] rounded-[6px] top-[10px] left-[10px]'>
                                 <CiSearch className='w-[18px] h-[18px]' />
                                 <input
-                                    className='w-full outline-none '
+                                    className='placeholder:text-sm w-full outline-none '
                                     placeholder='Enter incident address or GPS'
                                     type="text"
                                     name='' />
@@ -28,7 +28,7 @@ function InsidentPlace() {
                             <div className='flex items-center gap-[5px]  w-[224px] bg-white  px-[10px] py-[12px] rounded-[6px] top-[10px] left-[10px]'>
                                 <CiSearch className='w-[18px] h-[18px]' />
                                 <input
-                                    className='w-full outline-none '
+                                    className='placeholder:text-sm w-full outline-none '
                                     placeholder='Pinpoint damage'
                                     type="text"
                                     name='' />
