@@ -31,14 +31,14 @@ function Locations() {
                     <Icondesign image={"/images/cost.png"} />
                     <div>
                       <SecondaryText>Approx Cost:</SecondaryText>
-                      <PrimaryText>60,607456.00</PrimaryText>
+                      <HeadingText>60,607456.00</HeadingText>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className='border-y border-bgPrimary py-4 md:py-[40px]'>
-                <PrimaryText>Description</PrimaryText>
+                <HeadingText>Description</HeadingText>
                 <SecondaryText>Lorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werho</SecondaryText>
                 
               </div>
