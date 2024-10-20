@@ -14,19 +14,19 @@ function Dashboard() {
         {/* imageCard Sysem with chat */}
 
         {
-          isTrue ? <div onClick={()=>setIsTrue(!isTrue)} className='w-[77px] absolute bottom-[10px]  right-[25px] text-xm h-[77px] flex items-center justify-center border rounded-full bg-white shadow-green-400'>
-            <RxCross2  className='text-5xl' />
+          isTrue ? <div onClick={()=>setIsTrue(!isTrue)} className='w-[77px] h-[77px] fixed bottom-[10px]  right-[25px] text-xm  flex items-center justify-center  rounded-full bg-white shadow-btnShadow '>
+            <RxCross2  className='text-2xl  ' />
           </div> 
           : 
           
-          <div onClick={()=>setIsTrue(!isTrue)} className='absolute bottom-[10px]  right-[25px]'>
-            <img  src="/images/chat.png" alt="" />
+          <div onClick={()=>setIsTrue(!isTrue)} className='fixed bottom-[10px]  right-[25px] '>
+            <img className='shadow-btnShadow'  src="/images/chat.png" alt="" />
           </div>
         }
 
 
 
-        <div className='absolute bottom-[110px] right-[25px]'>
+        <div className='fixed bottom-[110px] right-[25px]'>
           <ChatBox isTrue= {isTrue} />
         </div>
 

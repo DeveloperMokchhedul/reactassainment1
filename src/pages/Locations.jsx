@@ -6,6 +6,8 @@ import { locationData } from '../api/loactionData';
 import Heading from '../components/Locations/Heading';
 import { activitiesData } from '../api/Activities';
 import Activities from '../components/Locations/Activities';
+import PrimaryText from '../components/Locations/primaryText';
+import SecondaryText from '../components/Locations/SecondaryText';
 
 function Locations() {
   return (
@@ -21,23 +23,24 @@ function Locations() {
                   <div className='flex gap-2 items-center'>
                     <Icondesign image={"/images/location.png"} />
                     <div>
-                      <p>Location</p>
-                      <p>Tulare Country, Los Angles, CA 23415</p>
+                      <SecondaryText>Location</SecondaryText>
+                      <PrimaryText>Tulare Country, Los Angles, CA 23415</PrimaryText>
                     </div>
                   </div>
                   <div className='flex gap-2 items-center'>
                     <Icondesign image={"/images/cost.png"} />
                     <div>
-                      <p>Approx Cost:</p>
-                      <p>60,607456.00</p>
+                      <SecondaryText>Approx Cost:</SecondaryText>
+                      <PrimaryText>60,607456.00</PrimaryText>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className='border-y border-bgPrimary py-4 md:py-[40px]'>
-                <p>Description</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <PrimaryText>Description</PrimaryText>
+                <SecondaryText>Lorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werho</SecondaryText>
+                
               </div>
 
               <div className='my-4 md:my-[40px]'>
@@ -70,9 +73,9 @@ function Locations() {
 
             {/* Right Section */}
             <div className='flex-1 flex flex-col gap-4 md:gap-[17px]'>
-              <p className='text-start'>Incident Map</p>
+              <SecondaryText>Incident Map</SecondaryText>
               <img className='w-full h-auto md:max-w-[556px]' src="/images/place.png" alt="Location Map" />
-              <p>Start 19.1232, -118.233 | End 19.3245, -119.2323</p>
+              <SecondaryText>Start 19.1232, -118.233 | End 19.3245, -119.2323</SecondaryText>
             </div>
 
           </div>

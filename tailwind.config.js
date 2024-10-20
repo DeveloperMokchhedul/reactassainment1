@@ -18,11 +18,14 @@ export default {
         "bgSecondary":"#F4F4F7",
         "btnSecondary":"#FAFAFA",
         "bgBlack":"#3F3F46",
-        "titleColor":"#09090B"
+        "titleColor":"#09090B",
+        "descriptionColor":"#6B7280"
       },
-      boxShadow:{
-        "btnShadow":"1px solid #E5E7EB"
-      }
+      boxShadow: {
+        'btnShadow': '0px 4px 48px 0px #0000000F', // Custom shadow definition
+      },
+
+      
 
 
     },

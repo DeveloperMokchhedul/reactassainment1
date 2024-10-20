@@ -1,4 +1,6 @@
 import React from 'react'
+import PrimaryText from './primaryText'
+import SecondaryText from './SecondaryText'
 
 function Activities({className, image,title,des, date, price}) {
     return (
@@ -6,13 +8,13 @@ function Activities({className, image,title,des, date, price}) {
             <div className='flex gap-[17px] h-[108px] px-[10px] py-[15px] bg-bgPrimary rounded-[10px] transition-all duration-300 hover:scale-105'>
                 <img src={image} alt="" />
                 <div className='flex  flex-col'>
-                    <h1>{title}</h1>
+                    <PrimaryText>{title}</PrimaryText>
                     <div className='flex items-center gap-1'>
-                        <p>{des}</p>
+                        <SecondaryText>{des}</SecondaryText>
                         <img className='size-[4px]' src="/images/elips.png" alt="" />
-                        <p>{date}</p>
+                        <SecondaryText>{date}</SecondaryText>
                     </div>
-                    <p>${price}</p>
+                    <PrimaryText>{price}</PrimaryText>
                 </div>
             </div>
 

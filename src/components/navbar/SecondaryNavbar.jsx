@@ -5,6 +5,7 @@ import Button from '../common/Button'
 import ButtonIcon from '../common/ButtonIcon'
 import { FaPlus } from 'react-icons/fa'
 import { IoIosSearch } from 'react-icons/io'
+import { RxCross2 } from 'react-icons/rx'
 
 function SecondaryNavbar() {
     const location = useLocation()
@@ -21,24 +22,78 @@ function SecondaryNavbar() {
             <nav className='bg-bgPrimary md:pt-[32px] md:pb-[23px] border-t border-secondary/25 p-5 md:p-0'>
                 <Container>
                     <div className='md:flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start'>
-                        <div className='flex flex-col gap-[06px] text-center md:text-start'>
-                            <p className='font-onest text-[12px] leading-[15px] text-secondary'>Welcome back</p>
-                            <h1 className='font-onest font-bold text-[26px] leading-[33px] text-bgBlack'>
+                        <div className='flex gap-[10px] text-center justify-center'>
+                            {
+                                location.pathname === "/incidents/create/describer" ||
+                                    location.pathname === "/incidents/create/describer/details" ||
+                                    location.pathname === "/incidents/create/describer/details/location"
+                                    ?
+                                    <div className='p-3 w-[41px] h-[41px] bg-white rounded-full'>
+                                        <RxCross2 className='font-bold' />
+                                    </div>
+                                    : ""
+                            }
 
-                                {location.pathname === "/" && "Dashboard" ||
-                                    location.pathname === "/incidents" && "Incidents" ||
-                                    location.pathname === "/incidents/create/describer" && "New Incident" ||
-                                    location.pathname === "/incidents/create/describer/details" && "New Incident" ||
-                                    location.pathname === "/incidents/create/describer/details/location" && "New Incident" ||
-                                    location.pathname === "/locations" && "DR-4699 March 2023 Severe Storms"}
-                            </h1>
+                            <div className='flex flex-col gap-[06px] text-center md:text-start'>
+                                {
+                                    location.pathname === "/incidents/create/describer" ||
+                                        location.pathname === "/incidents/create/describer/details" ||
+                                        location.pathname === "/incidents/create/describer/details/location"
+                                        ?
+                                        <p className='font-onest text-[12px] leading-[15px] text-secondary'>Home - Incidents - New Incident</p>
+                                        : <p className='font-onest text-[12px] leading-[15px] text-secondary'>Welcome back</p>
+
+
+                                }
+
+                                <h1 className='font-onest font-bold text-[26px] leading-[33px] text-bgBlack'>
+
+                                    {location.pathname === "/" && "Dashboard" ||
+                                        location.pathname === "/incidents" && "Incidents" ||
+                                        location.pathname === "/incidents/create/describer" && "New Incident" ||
+                                        location.pathname === "/incidents/create/describer/details" && "New Incident" ||
+                                        location.pathname === "/incidents/create/describer/details/location" && "New Incident" ||
+                                        location.pathname === "/locations" && "DR-4699 March 2023 Severe Storms"}
+                                </h1>
+
+                            </div>
+
                         </div>
+
+
+
+                        {
+                            location.pathname === "/incidents/create/describer" ?
+                                <div className='relative md:w-[250px] lg:w-[350px] xl:w-[527px] bg-bgSecondary h-[7px] rounded-full mt-[20px]'>
+                                    <div className='bg-[#FB923C] w-[33%] h-full rounded-full absolute'>
+                                    </div>
+                                </div>
+                                : ""
+                                    ||
+                                    location.pathname === "/incidents/create/describer/details" ?
+                                    <div className='relative w-[527px] bg-bgSecondary h-[7px] rounded-full mt-[20px]'>
+                                        <div className='bg-[#FB923C] w-[65%] rounded-full h-full absolute'>
+                                        </div>
+                                    </div>
+                                    : "" ||
+                                        location.pathname === "/incidents/create/describer/details/location" ?
+                                        <div className='relative w-[527px] bg-bgSecondary h-[7px] rounded-full mt-[20px]'>
+                                            <div className='bg-[#FB923C] w-[100%] rounded-full h-full absolute'>
+                                            </div>
+                                        </div>
+                                        : ""
+
+                        }
+
+
+
 
                         {/* button show and hidden acording to path */}
 
-                        <div className='flex gap-5 justify-center'>
+                        <div className='flex gap-5 justify-center mt-[15px] md:mt-[0px]'>
                             {
                                 location.pathname === "/incidents/create/describer" ||
+
                                     location.pathname === "/incidents/create/describer/details" ||
                                     location.pathname === "/incidents/create/describer/details/location"
                                     ? "" :
