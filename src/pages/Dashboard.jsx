@@ -26,7 +26,7 @@ function Dashboard() {
 
 
 
-        <div className='fixed bottom-[110px] right-[25px]'>
+        <div className='fixed bottom-[50px] right-[25px]'>
           <ChatBox isTrue= {isTrue} />
         </div>
 
