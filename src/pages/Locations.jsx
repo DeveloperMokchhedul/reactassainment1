@@ -6,7 +6,7 @@ import { locationData } from '../api/loactionData';
 import Heading from '../components/Locations/Heading';
 import { activitiesData } from '../api/Activities';
 import Activities from '../components/Locations/Activities';
-import PrimaryText from "../components/Locations/PrimaryText"
+// import PrimaryText from "../components/Locations/PrimaryText"
 import SecondaryText from '../components/Locations/SecondaryText';
 
 function Locations() {
@@ -24,21 +24,21 @@ function Locations() {
                     <Icondesign image={"/images/location.png"} />
                     <div>
                       <SecondaryText>Location</SecondaryText>
-                      <PrimaryText>Tulare Country, Los Angles, CA 23415</PrimaryText>
+                      <p>Tulare Country, Los Angles, CA 23415</p>
                     </div>
                   </div>
                   <div className='flex gap-2 items-center'>
                     <Icondesign image={"/images/cost.png"} />
                     <div>
                       <SecondaryText>Approx Cost:</SecondaryText>
-                      <PrimaryText>60,607456.00</PrimaryText>
+                      <p>60,607456.00</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className='border-y border-bgPrimary py-4 md:py-[40px]'>
-                <PrimaryText>Description</PrimaryText>
+                <p>Description</p>
                 <SecondaryText>Lorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werho</SecondaryText>
                 
               </div>
