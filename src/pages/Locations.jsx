@@ -6,7 +6,7 @@ import { locationData } from '../api/loactionData';
 import Heading from '../components/Locations/Heading';
 import { activitiesData } from '../api/Activities';
 import Activities from '../components/Locations/Activities';
-import PrimaryText from '../components/Locations/primaryText';
+import PrimaryText from "../components/Locations/PrimaryText"
 import SecondaryText from '../components/Locations/SecondaryText';
 
 function Locations() {

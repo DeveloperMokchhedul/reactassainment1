@@ -2,6 +2,7 @@ import React from 'react'
 import PrimaryText from './primaryText'
 import SecondaryText from './SecondaryText'
 
+
 function Activities({className, image,title,des, date, price}) {
     return (
         <>
