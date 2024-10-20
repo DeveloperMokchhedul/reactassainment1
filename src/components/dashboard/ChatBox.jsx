@@ -12,7 +12,7 @@ function ChatBox({isTrue}) {
                 <h1 className='font-onest font-bold text-[18px] leading-[22px] text-white'>Chat with Cypher</h1>
             </div>
             <div className='w-full h-full'>
-                <div className='flex flex-col gap-[15px] p-[15px]'>
+                <div className='flex flex-col gap-[5px] p-[15px]'>
                     <div className='flex justify-end'>
                         <ChatText className="">Lorem ipsum dolar sit general sac mascho werho</ChatText>
                     </div>

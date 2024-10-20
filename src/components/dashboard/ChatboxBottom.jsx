@@ -10,7 +10,9 @@ function ChatboxBottom() {
         <CiCamera />
         <CiImageOn />
         <ImAttachment />
-
+        </div>
+        <div>
+          <Button className={"w-[80px] h-[30px] text-[12px]"}>send</Button>
         </div>
     
       
